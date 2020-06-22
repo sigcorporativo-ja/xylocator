@@ -4,6 +4,8 @@
 Plugin que permite localizar las coordenas introducidas por el usuario en un Sistema de referencia determinado.
 Las coordenadas son transformadas a proyección que tenga el mapa en ese momento.
 
+![Imagen1](../img/xylocator1.png)
+
 # Dependencias
 
 - xylocator.ol.min.js
@@ -18,8 +20,6 @@ Las coordenadas son transformadas a proyección que tenga el mapa en ese momento
 # Parámetros
 
 El constructor se inicializa con un JSON de options con los siguientes atributos:
-
-![Imagen1](../img/xylocator1.png)
 
 - **position**. Indica la posición donde se mostrará el plugin
   - 'TL':top left (default)
