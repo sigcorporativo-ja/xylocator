@@ -7,7 +7,6 @@
     font-size: 15px;
     height: 39px;
     line-height: 40px;
-    padding: 5px;
     padding-left: 10px;
     text-align: center;
 }
@@ -105,4 +104,28 @@ div.m-xylocator-container>div.m-xylocator-panel>div.button {
 }
 .m-areas > div.m-area > div.m-panel.m-xylocator.collapsed {
     max-height: 40px;
+}
+
+#m-xylocator-dms > div > div > input[type="number"] {
+    width: 2.5rem;
+}
+#m-xylocator-dms > div > div {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+#m-xylocator-dms > div {
+    display: flex;
+}
+#m-xylocator-dms > div > div > span {
+    font-size: 24px;
+    margin-left: 2px;
+    margin-right: 10px;
+}
+#m-xylocator-dms .m-xylocator-dms-radio {
+    line-height: 14px;
+    width: 70px;
+}
+#m-xylocator-dms p {
+    margin-bottom: -0.8rem;
 }
