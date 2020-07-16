@@ -4,7 +4,7 @@
 Plugin que permite localizar las coordenas introducidas por el usuario en un Sistema de referencia determinado.
 Las coordenadas son transformadas a proyección que tenga el mapa en ese momento.
 
-![Imagen1](../img/xylocator1.png)
+![Imagen1](../img/xylocator_1.png)
 
 # Dependencias
 
@@ -41,10 +41,6 @@ mp.on('xylocator:locationCentered', (data) => {
    center: ${data.center[0].toFixed(2)}, ${data.center[1].toFixed(2)}`);
 });
 ```
-
-# Otros métodos
-
-
 # Ejemplos de uso
 
 ```javascript
@@ -57,13 +53,4 @@ mp.on('xylocator:locationCentered', (data) => {
       });
 
    map.addPlugin(mp);
-```
-
-```javascript
-const mp = new XYLocator({
-  position: 'TL',
-  zoom: 16
-});
-
-map.addPlugin(mp);
 ```

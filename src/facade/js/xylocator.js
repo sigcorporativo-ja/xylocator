@@ -17,7 +17,7 @@ export default class XYLocator extends M.Plugin {
    * @param {Object} impl implementation object
    * @api stable
    */
-  constructor(options) {
+  constructor(options = {}) {
     super();
 
     /**
