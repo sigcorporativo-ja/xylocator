@@ -6,6 +6,7 @@ const map = M.map({
   center: [-443729, 4860856],
   layers: ['OSM'],
   zoom: 4,
+  controls:["mouse"]
 });
 
 const mp = new XYLocator({

@@ -4,7 +4,7 @@
 import '../assets/css/xylocator';
 import XYLocatorControl from './xylocatorcontrol';
 import { getValue } from './i18n/language';
-
+import api from '../../api';
 /**
  * @classdesc
  * Main facade plugin object. This class creates a plugin
@@ -47,6 +47,13 @@ export default class XYLocator extends M.Plugin {
     if (this.position_ === 'TL' || this.position_ === 'BL') {
       this.positionClass_ = 'left';
     }
+
+    /**
+     * Metadata from api.json
+     * @private
+     * @type {Object}
+     */
+    this.metadata_ = api.metadata;
 
     /**
      * Zoom to do
@@ -139,5 +146,16 @@ export default class XYLocator extends M.Plugin {
    */
   getAPIRest() {
     return `${this.name}=${this.position}`;
+  }
+
+  /**
+   * This function gets metadata plugin
+   *
+   * @public
+   * @function
+   * @api stable
+   */
+  getMetadata() {
+    return this.metadata_;
   }
 }
