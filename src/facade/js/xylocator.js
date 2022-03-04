@@ -86,7 +86,7 @@ export default class XYLocator extends M.Plugin {
    * @api
    */
   addTo(map) {
-    this.facadeMap_ = map;
+    this.map_ = map;
     this.control_ = new XYLocatorControl({ projections: this.projections_, zoom: this.zoom_ });
     this.panel_ = new M.ui.Panel('xylocator', {
       collapsible: true,
@@ -102,10 +102,10 @@ export default class XYLocator extends M.Plugin {
     });
 
     this.panel_.addControls(this.controls_);
-    this.panel_.on(M.evt.ADDED_TO_PANEL, () => {
+    this.panel_.on(M.evt.ADDED_TO_MAP, () => {
       this.fire(M.evt.ADDED_TO_MAP);
     });
-    map.addPanels(this.panel_);
+    this.map_.addPanels(this.panel_);
   }
 
   /**
@@ -116,8 +116,8 @@ export default class XYLocator extends M.Plugin {
    * @api
    */
   destroy() {
-    this.facadeMap_.removeControls([this.control_]);
-    [this.facadeMap_, this.control_, this.panel_] = [null, null, null];
+    this.map_.removeControls([this.control_]);
+    [this.map_, this.control_, this.panel_] = [null, null, null];
   }
 
   /**
